@@ -21,7 +21,15 @@ const App = () => {
 
   console.log(currentColorArray);
 
-  return <div></div>;
+  return (
+    <div className="app">
+      <div className="game">
+        {currentColorArray.map((color, index) => (
+          <img key={index} style={{ backgroundColor: color }} />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default App;
